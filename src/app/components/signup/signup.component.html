@@ -1,0 +1,26 @@
+<form [formGroup]="signupForm" (ngSubmit)="registerUser(signupForm)" #formDir="ngForm">
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+        <div class="Title-text2">
+            <h2 class="Thin-fonts "> Sign Up </h2>
+        </div>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Full Name</mat-label>
+            <input matInput placeholder="Full Name" value="" formControlName="fullName">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" value="" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" value="" formControlName="password">
+        </mat-form-field>
+
+        <button mat-raised-button class="mrgn-b-md" color="accent">Create Account</button>
+      
+        <div><a class="signupLink bottomtextlink" style="margin-right: 1rem;" routerLink="/login">Sign In</a></div>
+    </div>
+</form>

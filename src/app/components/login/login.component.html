@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" (ngSubmit)="login(loginForm)" #formDir="ngForm">
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+         <div class="Title-text2">
+          <h2 class="Thin-fonts "> Sign In </h2>
+         </div>
+
+         <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" value="" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" value="" formControlName="password">
+        </mat-form-field>
+
+        <button color="primary" mat-raised-button>Sign In</button>
+        <div><a class="signupLink bottomtextlink" style="margin-right: 1rem;" routerLink="/signup">Create New Account</a></div>
+    </div>
+</form>
